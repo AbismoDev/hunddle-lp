@@ -1,0 +1,161 @@
+/*estilos globais*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url('../assets/bg-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header > .container, footer > .container{
+    padding: 10px 2%;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*header*/
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+/*body*/
+.huddle-container{
+    display: flex;
+}
+
+.huddle-img,  .huddle-content{
+    width: 50%;
+}
+
+.huddle-img{
+    height: 400px;
+    background-image: url('../assets/illustration-mockups.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.huddle-content{
+    padding: 30px;
+    color: white;
+}
+
+.huddle-content h1{
+    font-size: 32px;
+}
+
+.huddle-content p{
+    margin-top: 20px;
+    font-size: 16.5px;
+    opacity: .7;
+}
+
+.huddle-content button{
+    margin-top: 20px;
+    width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    color: hsl(257, 40%, 49%);
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 1px 3px 6px 1px hsla(256, 42%, 29%, 0.781);
+}
+
+.huddle-content button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+/*footer*/
+.attribution { 
+    margin-top: 20px;
+    font-size: 12px; 
+    color: white;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(276, 100%, 21%);
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.attribution a:hover{
+    opacity: .7;
+}
+
+footer{
+    padding: 10px 0;
+}
+
+footer > .container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-facebook, .icon-twitter, .icon-instagram{
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icon-facebook:hover, .icon-twitter:hover, .icon-instagram:hover{
+    border: 1px solid hsl(300, 69%, 71%);
+    color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 720px) {
+    /*body*/
+    .huddle-container{
+        flex-direction: column;
+    }
+
+    .huddle-img,  .huddle-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .huddle-img{
+        height: 300px;
+    }
+
+    .huddle-content h1{
+        font-size: 26px;
+    }
+
+    footer > .container{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url('../assets/bg-mobile.svg');
+        background-position: top;
+        background-size: contain;
+    }
+}
